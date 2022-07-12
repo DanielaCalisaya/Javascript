@@ -7,14 +7,12 @@ de windows son compilados para que después la misma máquina lo lea */
 
 //Ecma - Se encarga de estendarizar para que todos los navegadores tengan la opcion de usar este lenguaje optimizado entonces todos los navegadores lo correran
 
-//Node y 
-//NPM(Node Package Manager) gestiona todos los paquetes de NodeJs
+/* Node y 
+NPM(Node Package Manager) gestiona todos los paquetes de NodeJs */
 
 //Para iniciar un proyecto de Node:
 //npm init
 //Sessión de preguntas(Le podemos indicar que framework usaremos para los test, test command)
-
-//ctrl + p para que me haga disponible los archivos que quiero abrir
 
 //Para ver en consola lo que hice en tal archivo: node hola_mundo.js
 
@@ -26,4 +24,10 @@ de windows son compilados para que después la misma máquina lo lea */
         "saludar":"node hola_mundo.js"
     }
 Y en consola hago npm run saludar 
+*/
+
+/* ---------------------COMANDOS---------------------
+ctrl + p    -> para que me haga disponible los archivos que quiero abrir
+ctrl + }    -> me comenta esa linea
+
 */

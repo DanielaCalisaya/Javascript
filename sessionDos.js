@@ -6,14 +6,12 @@ TIPOS: -> Primitivos: Number, String, Boolean, Null, Undefined
        -> Objetos
 
 VARIABLES:
-var caja donde se almacena un valor, ese valor puede variar
+var -> caja donde se almacena un valor, ese valor puede variar
 let 
 const
 Ejemplo: Si uso una variable var y le asigno un valor,
 y después hago un for y dentro vuelvo a declararla, seria una mala practica, solo la llamo y el =
 
-
-Atajo:  ctrl + }    -> me comenta esa linea
 console.log(typeof nombreDeAlgo) -> Me dice el tipo, si es string, booleano o number, etc
 
 NOTACION:
@@ -37,12 +35,10 @@ const movil = {    -> Objeto con diferentes atributos, no podemos reasignarlo si
 Suponiendo que uno de esos atributos queremos que se llame
 altura_tarjeta, lo pondriamos dentro de comillas y le damos valor,
 si no lo ponemos dentro de comillas me dará error
-
-FECHAS
-new Date() -> asi creamos una fecha
-
 */
 
+/* FECHAS
+new Date() -> asi creamos una fecha */
 const ahora = new Date();
 console.log(ahora);
 const dia = ahora.getDate();
