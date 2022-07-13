@@ -74,3 +74,69 @@ if (min < max) {
 if (min <= max) { 
     console.log("Min es menor o igual que max");
 }
+
+// BUCLES FOR Y WHILE---------------------------------------
+/* for(inicializacion; condicion; actualizacion) {
+    Se ejecutará todo el bucle mientras esta condicion se cumpla
+} */
+
+/* i = i + 1;
+i += 1;
+i++        De estas tres maneras podria poner en la actualizacion, pero el mas usado es el ultimo */
+for(let i = 0; i < 10; i++) {
+   console.log(i);
+}
+
+console.log('-------------');
+
+let lista = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10] //Recorrer la lista
+for(let i = 0; i < lista.length; i++){
+    console.log(lista[i] * 20); //Accedemos al indice 
+}
+
+console.log('-------------');
+
+// Estructura forof
+for (let valor of lista){ //Es similar pero más especifico
+    console.log(valor); 
+}
+//En cada una de las ejecuciones del bucle está declarando valor a cada uno de los elementos de esta lista
+
+console.log('-------------');
+
+// Estructura forEach
+lista.forEach(valor => {
+    console.log(valor);
+})
+
+// Estructura forin 
+let persona = {
+    nombre: "Daniela",
+    apellido: "Calisaya",
+    edad: 32,
+    isDeveloper: true
+}
+
+let prop = "edad";
+console.log(persona[prop]); //Asi accedo a una en especifico
+for (let propiedad in persona){
+    console.log(propiedad); //Me dice por consola solo la propiedad no su valor
+    console.log(persona[propiedad]);
+}
+
+
+// BUCLE WHILE 
+/* 
+let i = 0;
+let max = 10;
+while(i < max){   Dentro de los paréntesis la condicion-Puede que creamos un bucle infinito
+   console.log(i)  
+}    -> Aqui i no se actualiza, porque i siempre valdrá cero y siempre va a ser menor que max se ejecutará indefinidamente
+        para que no suceda tenemos que actualizar la variable dentro de while, x ejemplo i++
+*/
+
+
+//Do... while
+/* do {   Ejecuta lo que está dentro de los paréntesis y después seguiria ejecutandolo si la condicion se cumple
+   i++
+} while (i < max); */
