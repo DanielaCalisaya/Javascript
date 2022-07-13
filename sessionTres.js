@@ -45,3 +45,32 @@ switch (nota) {
         console.log('Error');
         break;
 }
+
+// COMPARACIONES -----------------------------------------------
+// == Igualdad simple(Solo checkea el valor) 
+// === Igualdad estricta(Compara el valor y el tipo)
+
+let a = 4;
+let b = 5;
+if (a != b) {  //Si es diferente
+    console.log('a es diferente a b - Debil');
+}
+if (a !== b) {  //Si es diferente en valor o en tipo
+    console.log('a es diferente a b - Estricta');
+}
+
+//Mayores y menores
+let max = 10;
+let min = 5;
+if (max > min) {
+    console.log("Max es mayor que min");
+}
+if (max >= min) { 
+    console.log("Max es mayor o igual que min");
+}
+if (min < max) { 
+    console.log("Min es menor que max");
+}
+if (min <= max) { 
+    console.log("Min es menor o igual que max");
+}
