@@ -167,3 +167,28 @@ for( let i = 0; i < numbers.length; i++ ){ //dentro del bucle let no var
 // Y cuál es el ámbito de un bucle
 /* Se refiere al alcanze que tienen las variables dentro de un bucle,
 Es decir que forman parte solo del bucle, si hacemos un console.log del i, nos dirá que es undefined */
+console.log('-------------');
+
+
+/* ETIQUETAS EN LOS BUCLES - Las etiquetas nos permiten nombrar los bucles for y while - NO es la mejor práctica*/
+//break and continue 
+//labels(nos permitirá un mayor control de los bucles exterior e interior)
+let unidades = 0;
+let decenas = 0;
+bucleDecenas: while (true) { //Este bucle controlará las decenas
+    bucleUnidades: while (true) { //Este bucle se encargará de controlar las unidades
+        console.log(`El número actual es: ${decenas}${unidades}`);
+        unidades++
+        if (unidades === 10) {
+            unidades = 0
+            break bucleUnidades; //Como les pusimos nombre(labels) ahora le estamos diciendo de que bucle queremos que salga
+        }
+    }
+    if (decenas === 2) {
+        //console.log(`El número actual es: ${decenas}${unidades}`);
+        break bucleDecenas;
+    }
+    decenas ++
+}
+
+
