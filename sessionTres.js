@@ -140,3 +140,30 @@ while(i < max){   Dentro de los paréntesis la condicion-Puede que creamos un bu
 /* do {   Ejecuta lo que está dentro de los paréntesis y después seguiria ejecutandolo si la condicion se cumple
    i++
 } while (i < max); */
+console.log('-------------');
+
+
+
+// FORMAS DE CONTROLAR LOS BUCLES CON CONTINUE Y BREAK(el break y el continue pueden afectar la legibilidad del código)
+// En casos muy especificos
+// Podemos controlar un poco más nuestros bucles
+let numbers = [1, 2, 3, 4, 5, 6, 7, 8];
+for( let i = 0; i < numbers.length; i++ ){ //dentro del bucle let no var
+    
+    if(numbers[i] === 3){
+        continue; 
+    /* No imprime el 3, sino que continua */
+    }
+    
+    console.log(numbers[i]);
+    
+    if(numbers[i] > 5){
+        break; /* Salta lo demás */
+    /* Si hay un elemento de los numeros que supere a 5 queremos que salga del bucle
+    por ejemplo en este caso, recordemos que empieza en 0, y cuenta 5 posiciones y corta el bucle */
+    }
+}
+
+// Y cuál es el ámbito de un bucle
+/* Se refiere al alcanze que tienen las variables dentro de un bucle,
+Es decir que forman parte solo del bucle, si hacemos un console.log del i, nos dirá que es undefined */
