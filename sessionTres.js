@@ -131,6 +131,7 @@ let i = 0;
 let max = 10;
 while(i < max){   Dentro de los paréntesis la condicion-Puede que creamos un bucle infinito
    console.log(i)  
+   i++;
 }    -> Aqui i no se actualiza, porque i siempre valdrá cero y siempre va a ser menor que max se ejecutará indefinidamente
         para que no suceda tenemos que actualizar la variable dentro de while, x ejemplo i++
 */
