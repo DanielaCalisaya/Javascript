@@ -29,5 +29,6 @@ Y en consola hago npm run saludar
 /* ---------------------COMANDOS---------------------
 ctrl + p    -> para que me haga disponible los archivos que quiero abrir
 ctrl + }    -> me comenta esa linea
+alt + 92    -> la barra invertida \
 
 */
