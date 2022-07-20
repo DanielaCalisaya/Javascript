@@ -91,3 +91,19 @@ let caracteres = "Hello, mi name is Daniela";
 console.log(caracteres.indexOf("Daniela")); // Nos devuelve la posición de la primera letra de la palabra que buscamos, si no lo encuentra nos devuelve -1
 console.log(caracteres.charAt(1)); 
 console.log(caracteres.lastIndexOf("Daniela")); // Nos pasa la ultima posición si es que esa palabra se repitiera
+
+/* Métodos de cadenas de texto III */
+/* https://regexr.com  -> expresiones regulares */ 
+/* match */
+let texto = "lorem lorem lorem rrelon tron"
+console.log(texto.match(/lorem/g)); //Me devuelve la palabra que le indique a nivel global
+
+/* includes - si existe */
+console.log(texto.includes("lorem")); //Me devolverá true porque encontró esa palabra
+
+/* si empieza con una palabra */
+//Nos dirá true o false si encuentra lo que le pasamos y si está al principio, ya sea una palabra o una cadena de carácteres
+console.log(texto.startsWith("o")); //false, no está al principio
+
+/* si termina con una palabra */
+console.log(texto.endsWith("m")); //true, hay palabras que terminan en m
