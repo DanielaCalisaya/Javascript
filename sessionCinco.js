@@ -61,3 +61,62 @@ console.log(j.toPrecision(6));
 /* En consola me da 1.62663e+16. El e+12 quiere decir
 que es multiplicado por 10 y elevado a 12 */
 console.log( typeof j.toPrecision(6)); //devuelve un string
+
+console.log("----------------------");
+/* MÉTODOS DE NUMBERS Y LIMITES EN JS */
+//Operador valueOf() - Obtener valores numéricos a partir de literales
+//En javascript los objetos que nosotros declaramos estan basados en prototipos
+let n = 2; //Se pueden definir asi
+let m = new Number(3) //Se inicia de forma numerica un valor, obtiene literalmente el valor numerico
+console.log(m); //[Number: 3]
+console.log(n + m);
+console.log(n.valueOf() + m.valueOf()); //Suma directamente el valor
+console.log(m.valueOf()); //Entonces asi obtenemos un valor primitivo
+
+let palabras = new String("Hola Mundo");
+console.log(palabras); //[String: 'Hola Mundo']
+console.log(palabras.valueOf()); //Hola Mundo
+
+//NaN - (Not a Number) - Infinity
+//Puede ser que uno este usando algo en donde no es numérico
+let number = Number('adios');
+console.log(number); //NaN -> no es un numero
+console.log(isNaN(number)); //true - nos adelantamos y le decimos que es un NaN
+
+let numerador = 19;
+let divisor = 0;
+console.log(numerador / divisor); //Me tira Infinity
+//La regla matemática dice que algo dividido a 0 es 0
+let divisorDos = null;
+console.log(numerador / divisorDos); //Me tira Infinity
+
+//Cómo convertir los string a valores numéricos con Number, parseInt y parseFloat
+//Number
+let numero = '5.08';
+console.log(typeof numero);
+let numeroDos = 17.2;
+console.log(numero + numeroDos); //Me da 5.0817.2
+/* Entonces el primer número era string y el segundo es number, 
+los suma, no es buena práctica, error de concepto */
+console.log(Number(numero) + numeroDos); //Ese string lo pasa a number, y ahi nos suma correctamente(22.28)
+//parseInt && parseFloat
+console.log(parseInt(numero)); //Lo convierte en un número entero
+console.log(parseFloat(numero)); //Lo convierte en un número decimal
+
+//Numeros hexadecimales (base 16)
+let numHex = '0x3a5b7'; 
+//Todos los números hexadecimales empezarán con 0x, 
+//en este caso es inventado pero no sabemos lo que vale
+console.log(parseInt(numHex, 16));
+
+//Obtener los valores máximo y mínimo en Javascript
+let max = Number.EPSILON //Minima diferencia que puede haber entre uno y otro número
+let minPrecision = Number.EPSILON;
+let minValor = Number.MIN_VALUE;
+let maxValor = Number.MAX_VALUE;
+
+console.log(max);
+console.log(minPrecision); // La precision minima que podemos tener para pasar a otro valor es 2.220446049250313e-16, el minimo valor en el que podemos trabajar en JS
+console.log(minValor); // El valor más pequeño a tener es 5e-324(es un 0 con 324 ceros por delante y al final un 5)
+console.log(maxValor); // El mayor valor que podemos tener dentro de JS es 1.7976931348623157e+308(con 308 números por detrás)
+console.log(2 ** 5000); // 2 elevado a lo que tenga que ser, pasando el máximo ya nos dice por consola que es infinito
