@@ -37,3 +37,31 @@ console.log(tercerArray);
 //Modificar valores .splice(indice, 1, valores)
 tercerArray.splice(0, 1, "chau") //Se puede sustituir uno o más valores
 console.log(tercerArray);
+
+console.log("-------------");
+/* Concatenación y obtención de fragmentos de listas */
+//Cómo unir dos listas .concat
+const listaUno = ["hola", null, 2, 600]; //No modifica el valor de las listas
+const listaDos = ["chau", undefined, 9, true];
+console.log(listaUno.concat(listaDos)); //Me une todos los valores en un solo array
+const listaTres = listaUno.concat(listaDos);
+console.log(listaTres);
+
+//Cómo unir dos listas con el factor de propagación o SPREAD OPERATOR
+console.log(...listaTres); //Me da por separado los valores de la lista 3
+const listaCuatro = [...listaUno, ...listaDos];
+console.log(listaCuatro);
+
+//ERROR : Mal entendido el concepto de factor de propagación
+const listaCinco = [listaUno, listaDos];
+console.log(listaCinco); //Obtuvimos las dos listas, pero por separado
+
+//Cómo obtener una lista a partir de otra .slice() -> No modifica el valor original del array
+const newArray = ["hola", 9, 7, true, null, 2, 1]
+console.log(newArray.slice(0, 3)); //Necesita indice de inicio y de fin
+//Un nuevo array, en este caso a partir del indice 0 hasta el 3 [ 'hola', 9, 7 ]
+const nextArray = newArray.slice(1, 4); //Puedo guardar ese array en una nueva constante
+console.log(nextArray);
+
+const newNextArray = newArray.slice(2, -2);
+console.log(newNextArray); //No toma el indice -2
