@@ -65,3 +65,69 @@ console.log(nextArray);
 
 const newNextArray = newArray.slice(2, -2);
 console.log(newNextArray); //No toma el indice -2
+
+console.log("-----------------");
+/* MÉTODOS DE ITERACIÓN EN LISTAS */
+//Iterar los valores de una lista
+const iteracion = ["hola", 2, 8, 85, false, 96];
+
+//Forma de acceder al valor, quedo antigua y poco eficiente
+for(let i = 0; i < iteracion.length; i++){ 
+    console.log(iteracion[i]);
+}
+
+//Forma es6, mas eficiente -> .forEach()
+iteracion.forEach(valor => {
+    console.log(valor)
+})
+/* Le estamos asignando cada uno de los valores del array "iteracion"
+a la variable valor cada vez que entra dentro de este forEach,
+cada vez que entra está haciendo este valor */
+
+let suma = 0;
+const arrayNums = [5, 9, 7, 2, 3, 1];
+arrayNums.forEach(valor => { //En este forEach usamos un callback
+    suma += valor;
+    console.log(valor)
+});
+console.log(suma);
+
+//Búsqueda de un valor dentro de una lista .find()
+//Encontrar el elemento de esta lista
+const variable = iteracion.find(valor => {
+    if(valor === 96) {
+        return true
+    }
+})
+console.log(variable);
+
+const listaObjetos = [
+    {nombre: "Marisa", edad: 42},
+    {nombre: "Margarita", edad: 60},
+    {nombre: "Daniela", edad: 22},
+    {nombre: "Jenni", edad: 33},
+    {nombre: "Ramon", edad: 70}
+]
+
+/* const objeto = listaObjetos.find(o => {
+    if(o.nombre === "Daniela") {
+        return true
+    }
+}) 
+console.log(objeto.edad);  
+Obtenemos la edad de ese objeto que estamos buscando
+*/
+
+/* const objeto = listaObjetos.find(o => {
+    return o.nombre === "Daniela" 
+}) 
+console.log(objeto.edad); 
+Mas corto el codigo, nos pasa un true */
+
+const objeto = listaObjetos.find(o => o.nombre === "Daniela") 
+console.log(objeto.edad); 
+//O más corto todavia, en una sola linea
+
+//Podemos destructurar, mejor aun
+const { edad } = listaObjetos.find(o => o.nombre === "Daniela")
+console.log(edad);
