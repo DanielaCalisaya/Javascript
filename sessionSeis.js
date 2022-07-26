@@ -131,3 +131,56 @@ console.log(objeto.edad);
 //Podemos destructurar, mejor aun
 const { edad } = listaObjetos.find(o => o.nombre === "Daniela")
 console.log(edad);
+
+console.log("-----------------");
+/* Métodos avanzados, obtención de listas a partir de listas */
+// .map()
+const miArray = ["Argentina", "Neuquén", "Brasil", "Nueva York", "Madagascar"]
+const dev = miArray.forEach(v => {
+    console.log(v);
+}) //En consola vemos la lista
+console.log(dev); //Si miArray lo asigno a una variable y me da undefined, el objetivo del forEach en este caso no es hacer nada
+
+//Si utilizo map, ahi si me devuelve el valor
+const miNewArray = miArray.map((value, indice) => {
+    /* console.log(indice); */
+    return `${indice + 1} - ${value}`  //Podriamos sacar los corchetes y subir la linea a una sola
+    /* return value.concat(" Hello") */
+})
+console.log(miNewArray);
+
+
+// .filter()
+const listObjeto = [
+    {nombre: "Marta", edad: 40},
+    {nombre: "Pedro", edad: 80},
+    {nombre: "Tomás", edad: 31},
+    {nombre: "Silvana", edad: 30}
+]
+/* const personasMayores = listObjeto.filter(obj => {
+    if(obj.edad > 30){
+        return true
+    }else{
+        return false Entonces map si me trae y me devuelve algo
+    }
+})
+console.log(personasMayores);  */
+
+//Mucho más corto el código y fácil de leer->
+const personasMayores = listObjeto.filter(obj => obj.edad > 30); //Nos devulve un true y un false cada vez q no se cumple
+console.log(personasMayores);
+
+const nuevaLista = listObjeto.filter(obj => obj.nombre !== "Pedro");
+console.log(nuevaLista);
+
+
+// .reduce() Sirve para obtener algo, un valor
+const valores = [8, 4, 9, 2, 15, 63];
+const added = valores.reduce((anterior, actual, i, arrayOriginal) => { //Acepta 4 parámetros
+    console.log(anterior); //El objetivo del reduce es q este valor "anterior" también sea acumulativo
+    console.log(actual);
+    console.log(i);
+    console.log(arrayOriginal);
+    return anterior + actual
+}) 
+console.log(added);
