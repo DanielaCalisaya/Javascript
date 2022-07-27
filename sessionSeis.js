@@ -184,3 +184,84 @@ const added = valores.reduce((anterior, actual, i, arrayOriginal) => { //Acepta 
     return anterior + actual
 }) 
 console.log(added);
+
+/* Ordenación de listas y comparación entre dos listas */
+// .sort() -> MODIFICA EL ARRAY En ingles significa ordenar
+const number = [2, 7, 6, 4, 9, 15, 89, 3]
+console.log(number);
+
+number.sort((a, b) => { //callback con dos parámetros
+    if(a < b){
+        return -1 //Aquí puede ser cualquier valor positivo o negativo
+    }else if(a > b){
+        return +1
+    }else{ //a === b
+        return 0
+    }
+})//Debe retornar un valor numerico
+console.log(number);
+
+//Puede hacerse de otra manera... para arrays unicamente numericos
+const arrayNumerico = [23, 52, 1, 9, 45, 63, 0, 8];
+arrayNumerico.sort((a, b) => a - b); // o b - a
+console.log(arrayNumerico); //Entonces lo hacemos de manera más legible
+
+//Ordenar esta lista de objetos de menor a mayor, su edad
+const objetoLista = [
+    {nombre: "Marta", edad: 40},
+    {nombre: "Pedro", edad: 80},
+    {nombre: "Tomás", edad: 31},
+    {nombre: "Silvana", edad: 30}
+]
+
+/* objetoLista.sort((a, b) => {
+    if(a.edad < b.edad){
+        return -1
+    }else if(a.edad > b.edad){
+        return +1
+    }else{
+        return 0      Una manera de hacerlo
+    }
+}) */
+objetoLista.sort((a, b) => a.edad - b.edad); //Retornamos la division de estos dos
+console.log(objetoLista);
+
+
+//COMPARAR listas
+// .every()  -> Nos dirá si todos los componentes de esta lista cumplen una condicion, acepta dos parámetros
+const n = [5, 0, 89, 36, 3, 45, 7, -10, 96, -23];
+/* const resultado = n.every(valor => {
+    if(typeof valor === "number"){   Me trae true porque todos los valores son de tipo number
+        //(valor > 0)
+        return true
+    }else{
+        return false
+    }
+}) */
+
+//Cómo hacerlo más sencillo - simplicarlo al máximo -> buenas prácticas
+const resultado = n.every(valor => valor > 0)
+console.log(resultado);
+
+//Comparación de listas
+const arr1 = [1, 2, 3, 4];
+const arr2 = [1, 2, 3, 4];
+console.log(arr1 === arr2); 
+//Aunque sean iguales, me da false porque no se puden comparar de esta manera
+
+const compararArrays = (arr1, arr2) => {
+    if (arr1.length !== arr2.length) return false //Los numeros si se puden comparar
+    /* const res = arr1.every((valor, i) => {
+        if(valor === arr2[i]) return true
+        return false
+    }) */
+    const res = arr1.every((valor, i) => valor === arr2[i])
+    return res
+}
+console.log(compararArrays(arr1, arr2)); //Me da true
+/* Creamos una función que le pasamos los dos parámetros 
+en donde comparamos las longitudes, si no son iguales devulve el false
+si son iguales las longitudes, vamos a comparar los valores entre si */
+
+const arr3 = [1, 2, 3, 6]
+console.log(compararArrays(arr1, arr3)); // false
