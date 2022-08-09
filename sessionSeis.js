@@ -265,3 +265,37 @@ si son iguales las longitudes, vamos a comparar los valores entre si */
 
 const arr3 = [1, 2, 3, 6]
 console.log(compararArrays(arr1, arr3)); // false
+
+
+/* Identificar un valor en un array y objetos iterables */
+// .some() devolverá true si alguno de esos elementos cumple
+let javascript = [5, 8, 6, 1, 13, 147, 25, 890, -2]
+let respuesta = javascript.some(valor => valor < -0)
+console.log(respuesta); //true
+const existe = javascript.some(valor => valor === 90)
+console.log(existe);
+
+const objet = [
+    {nombre: "Ale", edad: 12},
+    {nombre: "Mari", edad: 34},
+    {nombre: "Ana", edad: 52},
+    {nombre: "Tom", edad: 22},
+]
+const existeMiguel = objet.some(persona => persona.nombre === "Miguel"); //false
+
+//Cómo poder obtener una lista a partir de un objeto iterable
+// from()
+const string = "Hola";
+console.log(string[1]);
+const nuevoString = Array.from(string);
+console.log(nuevoString); //[ 'H', 'o', 'l', 'a' ]
+
+const st = new Set ([2, 3, "hola,", 4]);
+const newst = Array.from(st);
+console.log(newst); //[ 2, 3, 'hola,', 4 ]
+
+//keys()
+const keys = javascript.keys()
+console.log(keys); //Nos dice por consola: Object [Array Iterator] {}
+const newKeys = Array.from(keys)
+console.log(newKeys);
