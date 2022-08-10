@@ -32,3 +32,65 @@ console.log(itMiSet);
 //Podemos convertir el set en un array de nuevo
 const arraySet = [ ...miSet ];
 console.log(arraySet[1]);
+console.log("-------------");
+
+
+/* Objetos en Javascript */
+const obj = {
+    id: 3,
+    nombre: "Daniela",
+    apellido: "Calisaya",
+    isDeveloper: true,
+    librosFavoritos: [
+        "Charly y la fábrica de chocolate",
+        "El corredor del laberinto"
+    ],
+    "4-juegos": [1, 2, 3, 4]
+}
+
+console.log(obj.librosFavoritos); //Accedo a una propiedad de ese objeto
+console.log(obj["4-juegos"]); //Asi podemos acceder a este
+//Definir una propiedad con variables
+const prop = "isDeveloper";
+console.log(obj[prop]);
+//Entonces asi accedemos a métodos a traves de variables
+
+//Replicando
+const objDos = obj; 
+/* Cuando yo defino un objeto a partir de otro objeto de esta manera 
+en lugar de copiar solo el valor y hacer un duplicado del objeto, 
+copia el mismo objeto y se cambian los dos */
+console.log(objDos); 
+objDos.nombre = "Helen";
+console.log(objDos.nombre);
+
+let valor = 4;
+let otroValor = valor;
+
+otroValor = 6; //No afecta a 'valor'
+console.log(valor);
+console.log(otroValor);
+// A la hora de iguar valores primitivos, hace una copia y lo almacena en otro lugar de memoria,
+// con los objetos no ocurre eso
+
+const objTres = { ...obj}
+console.log(obj.nombre);
+console.log(objTres.nombre);
+
+obj.nombre = "Ñañe"; //Afecta solo al objeto que acabo de crear
+console.log(obj.nombre);
+console.log(objTres.nombre);
+
+//Cómo ordenar listas de objetos en función de una propiedad
+const listaPeliculas = [
+    {titulo: "Lo que el viento se llevó", anio: 1939},
+    {titulo: "Titanic", anio: 1997},
+    {titulo: "Moana", anio: 2016},
+    {titulo: "El efecto mariposa", anio: 2004},
+    {titulo: "Ted", anio: 2012}
+]
+console.log(listaPeliculas);
+
+// .sort() -> Muta el valor del array original(ordena en este caso por año)
+listaPeliculas.sort((a, b) => a.anio - b.anio)
+console.log(listaPeliculas);
