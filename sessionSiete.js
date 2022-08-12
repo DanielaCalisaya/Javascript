@@ -94,3 +94,44 @@ console.log(listaPeliculas);
 // .sort() -> Muta el valor del array original(ordena en este caso por año)
 listaPeliculas.sort((a, b) => a.anio - b.anio)
 console.log(listaPeliculas);
+
+/* Fechas en Javascript */ 
+const fecha = new Date(); //Hay varias maneras de pasar la fecha
+console.log(fecha);
+
+//Los meses inicializan en cero
+const fechaDos = new Date(1990, 0, 23); //Y se le puede decir una hora, minutos, segundos o milisegundos
+console.log(fechaDos);
+
+const fechaTres = new Date(0);
+console.log(fechaTres);
+
+const fechaCuatro = new Date("October 13, 1990 12:15:15");
+console.log(fechaCuatro);
+
+//Cómo comparar fechas
+console.log(fecha > fechaDos);
+
+//Error, no se puede comparar las fechas de esta manera
+const fechaCinco = new Date(1990, 0, 23); //tanto a fechaDos como fechaCinco le asignamos el mismo resultado
+console.log(fechaCinco);
+console.log(fechaDos === fechaCinco);
+
+//Forma correcta de comparar
+//Deberiamos obtener los milisegundos
+console.log(fechaDos.getTime() === fechaCinco.getTime());
+
+/* Obtener el día, mes y el año de una fecha */
+//Obtener el día .getDate()
+console.log(fechaDos.getDate()); //23
+
+//Obtener el mes .getMonth()
+console.log(fechaDos.getMonth() + 1); //1
+
+//Obtener el año .getFullYear()
+console.log(fechaDos.getFullYear()); //1990
+
+//Cómo mostrar la fecha en un string
+console.log(fechaDos);
+// .toLocalDateString()
+console.log(fechaDos.toLocaleString());//"en-US" -> link de developer-modzilla
