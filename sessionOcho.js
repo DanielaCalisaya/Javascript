@@ -77,3 +77,31 @@ function doble(valor) {
     return valor * 2
 }
 console.log(doble(4)); //Este console si lo pongo aca o antes de la función tradicional no me dará error
+console.log("--------------------");
+
+
+/* Carga y sobrecarga de funciones */
+
+function saludarDos() {
+    hola()
+}
+function hola() {
+    console.log("Hola soy la función hola()");
+}
+saludarDos();
+/* Entonces primero se interpreta el código, de arriba a abajo
+Hasta que no encuentra dicha ejecución de la función no la guarda en memoria, no entra en caché */
+/* 
+1. carga la function global() 
+2. saludar() pasa por encima de la function global()
+3. function hola() saludar() global()
+4. cuando termina de cargar la function hola la quita de la carga y pasa a saludar() global()
+5. global()
+*/
+
+/* 
+function recursivo() {
+    recursivo()
+} 
+recursivo() Esta continuamente llamando a la función, llega al tamaño máximo de call stack.
+*/
