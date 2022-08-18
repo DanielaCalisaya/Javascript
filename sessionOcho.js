@@ -105,3 +105,26 @@ function recursivo() {
 } 
 recursivo() Esta continuamente llamando a la función, llega al tamaño máximo de call stack.
 */
+
+
+/* Funciones asincronas y promesas */
+function miAsync() {
+    /* Función que hace una llamada a una base de datos externa,
+    puede dar errores */
+}
+
+//promesas
+const miPromesa = new Promise((resolve, reject) => { //admite un callback
+    const i = Math.floor(Math.random() * 2)
+    //si está todo correcto
+    if(i !== 0){
+        resolve()
+    }else{
+        reject()
+    }
+})//Funciones que pueden o no, ejecutarse de forma exitosa
+
+miPromesa
+    .then(() => console.log("Se ejecutó correctamente"))
+    .catch(() => console.log("Error"))
+    .finally(() => console.log("Me ejecuto siempre")) //Si se ha ejecutado correctamente o con errores esta linea siempre se va a ejecutar
