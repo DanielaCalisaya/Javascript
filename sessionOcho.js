@@ -128,3 +128,24 @@ miPromesa
     .then(() => console.log("Se ejecutó correctamente"))
     .catch(() => console.log("Error"))
     .finally(() => console.log("Me ejecuto siempre")) //Si se ha ejecutado correctamente o con errores esta linea siempre se va a ejecutar
+
+
+/* Funciones generadoras */
+//Función generadora de ID incremental
+function* generaId() {
+    let id = 0;
+    while(true){
+        id++
+        if(id > 10) {
+            return id
+        }
+        yield id // -> hace como una especie de return, no sale sino que espera hasta que se vuelva a llamar
+    }
+}/*Cada vez que llamemos a la función nos envia un número, 
+para y cuando la volvemos a llamar a la funcion volverá a ejecutarse, 
+dara el numero y quedará parado*/
+const generador = generaId();
+console.log(generador.next().value); //Object [Generator] {} 
+console.log(generador.next().value);
+console.log(generador.next());
+console.log(generador.next());
