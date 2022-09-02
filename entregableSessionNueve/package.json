@@ -1,0 +1,14 @@
+{
+  "name": "entregablesessionnueve",
+  "version": "1.0.0",
+  "description": "entregable",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Daniela Calisaya",
+  "license": "ISC",
+  "dependencies": {
+    "winston": "^3.8.1"
+  }
+}
