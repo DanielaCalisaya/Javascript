@@ -1,0 +1,6 @@
+Top 10: Librerias
+JQuery -> Permite interactuar con páginas HTML, ya que se puede hacer de forma nativa, con document
+pero con JQuery se puede tratar el DOM de una forma más sencilla
+ReactJs
+VueJs
+ThreeJs -> puede convertir el DOM en una pantalla 3d
