@@ -1,8 +1,6 @@
 /* Cómo declarar una clase */
 class Persona { // usamos class, palabra reservada, y el nombre que le damos en mayuscula
-    nombre;
-    edad;
-    isDeveloper;
+   
     constructor(nombre, edad, isDeveloper){
         this.nombre = nombre //asi es como se declaran las variables de una clase
         this.edad = edad
