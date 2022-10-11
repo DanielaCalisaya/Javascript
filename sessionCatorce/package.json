@@ -1,0 +1,11 @@
+{
+  "name": "sessioncatorce",
+  "version": "1.0.0",
+  "description": "html basico",
+  "main": "index.js",
+  "scripts": {
+    "start": "http-server ."
+  },
+  "author": "Daniela",
+  "license": "ISC"
+}
