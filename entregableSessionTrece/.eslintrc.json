@@ -1,0 +1,10 @@
+{
+    "rules": {
+        // Override our default settings just for this directory
+        "eqeqeq": "warn",
+        "strict": "off",
+        "quotes": ["off", "doubles"], //con tal caracteristica que me error si es doble
+        "semi": ["error", "never"],
+        "no-dupe-keys": "error" //en un mismo método no pueden haber dos con el mismo nombre
+    }
+}

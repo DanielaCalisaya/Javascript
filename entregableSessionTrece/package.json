@@ -1,0 +1,11 @@
+{
+  "name": "entregablesessiontrece",
+  "version": "1.0.0",
+  "description": "eslint",
+  "main": "index.js",
+  "scripts": {
+    "lint": "eslint ."
+  },
+  "author": "Dani",
+  "license": "ISC"
+}

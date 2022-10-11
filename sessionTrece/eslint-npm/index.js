@@ -5,6 +5,7 @@ Al ingresar a la página, vamos a get started
 npm init
 npm init @eslint/config 
 
+
 Me hará varias preguntas sobre el proyecto o el entorno que estoy usando, y qué correcciones quiero en mi proyecto
 
 En el package.json al final, me dice la dependencia instalada y su version */
