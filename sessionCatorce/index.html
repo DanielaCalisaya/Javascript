@@ -5,12 +5,19 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Web con Javascript</title>
+    <!-- script de la libreria del texto con animación-->
+    
     
 </head>
 <body>
     <h1>Hola Mundo</h1>
     <p id="parrafo">Párrafo</p>
+    <span id="myElement"></span>
+
     <script src="index.js"></script>
+    <script src="https://unpkg.com/typeit@8.7.0/dist/index.umd.js"></script>
+    <script src="animacion.js"></script>
+    <!-- también nos propone tenerlo definido aqui en el html, pero como mejor práctica es llevarlo a un doc js -->
 </body>
 </html>
 
@@ -24,3 +31,9 @@ Necesitaré el package asi que hago npm init
 y en ese archivo agrego un script -> "start": "http-server ."
 Para correr -> npm start
 -->
+
+<!-- 
+    https://www.typeitjs.com/docs/vanilla  -> integrando nuevas librerias
+    podemos poner el script en el head o debajo. 
+    En este caso nos está pidiendo que sea debajo
+ -->
