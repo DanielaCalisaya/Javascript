@@ -1,0 +1,22 @@
+.seccion {
+    background-color: darkslateblue;
+    padding: 1rem;
+    margin: 1rem;
+}
+
+.parrafo {
+    background-color: white;
+    padding: 1rem;
+}
+
+.parrafo .dragging {
+    opacity: 0.3; 
+}
+
+.img-fantasma {
+    width: 200px;
+    height: 200px;
+    background-color: blue;
+    position: absolute;
+    left: -100vw; /* escondemos el cuadro azul-img */
+}
