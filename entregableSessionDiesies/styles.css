@@ -1,0 +1,25 @@
+.container {
+    background-color: grey;
+    padding: 0.5rem;
+    margin: auto;
+    width: 50%;
+}
+
+.seccion {
+    margin: 1rem;
+}
+
+.parrafo {
+    background-color: plum;
+    margin: 1rem;
+    padding: 0.5rem;
+}
+
+.parrafo .dragging {
+    background-color: red; 
+}
+
+img {
+    display: flex;
+    margin: auto;
+}

@@ -3,6 +3,10 @@ const parrafos = document.querySelectorAll(".parrafo")
 const secciones = document.querySelectorAll(".seccion")
 
 parrafos.forEach(parrafo => {
+    /* parrafo.addEventListener("click", () => {
+        console.log("click")
+    }) 
+    */
     parrafo.addEventListener("dragstart", event => { //cuando empiezo a arrastrar
         //console.log("Inicio de arrastre");
         console.log("Estoy arrastrando el párrafo: " + parrafo.innerHTML); //mostrará el texto que tiene dentro
