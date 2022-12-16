@@ -1,0 +1,11 @@
+#map { /* selectores de id con esta almohadilla */
+    height: 100%;
+    /* height: 400px 
+    width: 100%*/
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}

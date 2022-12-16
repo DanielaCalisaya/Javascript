@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mapas</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>App de mapas</h1>
+    <div id="map"></div> <!-- crear este div -->
+
+    <script
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC29ezs-SVgbrPFcGmo7NuHZO3nIlNl2z0&callback=initMap&v=weekly"
+        defer
+    >
+    </script> 
+    <!-- me traigo el script que me proporciona la api de google maps, 
+         el atributo 'defer' hace que la devolución de llamada se ejecute 
+         después del HTML completo se ha analizado 
+    -->
+    <script src="index.js"></script>
+</body>
+</html>
